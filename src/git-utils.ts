@@ -22,7 +22,7 @@ export async function copyAssets(publishDir: string, destDir: string): Promise<v
     }
     const filePublishPath = path.join(publishDir, file);
     const fileDestPath = path.join(destDir, file);
-    const destPath = path.basename(destPath);
+    const destPath = path.basename(destDir);
     core.debug(`publishDir: ${publishDir}`);
     core.debug(`filePublishPath: ${filePublishPath}`);
     core.debug(`destDir: ${destDir}`);
