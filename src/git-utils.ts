@@ -20,6 +20,7 @@ export async function copyAssets(publishDir: string, destDir: string): Promise<v
     if (file.endsWith('.git') || file.endsWith('.github')) {
       continue;
     }
+    destDir = destDir + '/';
     const filePublishPath = path.join(publishDir, file);
     const fileDestPath = path.join(destDir, file);
     const destPath = path.dirname(destDir);
