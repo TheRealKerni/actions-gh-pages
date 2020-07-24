@@ -29,11 +29,11 @@ export async function copyAssets(publishDir: string, destDir: string): Promise<v
     core.debug(`file: ${file}`);
     core.debug(`destPath: ${destPath}`);
     core.debug(`fileDestPath: ${fileDestPath}`);
-    core.debug(`check directory: ${destPath}`);
     if (fs.existsSync(destPath) === false) {
-      core.debug(`create directory: ${destPath}`);
-      await io.mkdirP(destPath);
+      core.debug(`directory does not exist: ${destPath}`);
+      await createDir(destPath);
     }
+    core.debug(`copy file ${filePublishPath} to ${fileDestPath}`);
     await io.cp(filePublishPath, fileDestPath, copyOpts);
     core.info(`[INFO] copy ${file}`);
   }
