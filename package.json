@@ -37,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/peaceiris/actions-gh-pages.git"
+    "url": "git+https://github.com/therealkerni/actions-gh-pages.git"
   },
   "keywords": [
     "GitHub Actions",
